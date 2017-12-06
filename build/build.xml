@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<project name="Flota" description="Manage company cars" default="all" >
+	<import file="${phing.dir}/../../buildfiles/phing/common.xml" />
+
+	<!--
+	====================================================================================================
+	File sets
+	====================================================================================================
+	-->
+		<fileset dir="${dirs.component}" id="component" expandsymboliclinks="true">
+		<include name="backend/**" />
+		<include name="frontend/**" />
+		<include name="language/**" />
+		<include name="media/**" />
+
+		<include name="LICENSE.txt" />
+		<include name="*.xml" />
+	</fileset>
+
+	<!--
+	====================================================================================================
+	Tasks - General
+	====================================================================================================
+	-->
+
+	<target name="all" description="Makes everything"
+			depends="git,lang">
+	</target>
+
+	<target name="documentation" description="Documentation (does not exist)">
+		<echo>No documentation exists for this package</echo>
+	</target>
+
+</project>

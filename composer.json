@@ -1,0 +1,23 @@
+{
+    "name": "majem\/com_flota",
+    "description": "Komponent do zarzadzania flota zygula",
+    "authors": [
+        {
+            "name": "Mateusz Maciejewski",
+            "email": "majem96@gmail.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "fof": {
+            "name": "com_flota",
+            "paths": {
+                "backend": "component\/backend",
+                "frontend": "component\/frontend",
+                "media": "component\/media",
+                "translationsbackend": "translations\/component\/backend",
+                "translationsfrontend": "translations\/component\/frontend"
+            }
+        }
+    }
+}

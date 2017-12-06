@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+@package Flota
+@copyright Copyright (c)2010-2017 Mateusz Maciejewski
+@license GNU General Public License version 3, or later
+-->
+<form
+        type="browse"
+        show_header="1"
+        show_filters="1"
+        show_pagination="1"
+        norows_placeholder="COM_FLOTA_NO_MAILINGCYCLES"
+        >
+    <headerset>
+        <header name="flota_mailingcycle_id" label="COM_FLOTA_CAR_ID_LBL" type="RowSelect" tdwidth="10px" />
+
+        <header name="enabled" type="Published" sortable="true" tdwidth="10px" class="center"
+                label="JPUBLISHED"
+        />
+
+        <header name="name" type="Searchable" sortable="true"
+                label="COM_FLOTA_CITY"
+                filterclass="input"
+                searchfieldname="name"
+        />
+    </headerset>
+
+    <fieldset name="items">
+        <field name="flota_car_id" label="COM_FLOTA_CAR_ID_LBL" type="SelectRow"/>
+
+        <field name="enabled" type="Published"/>
+
+        <field name="name" name_from="name" type="Text"
+               show_link="true"
+               url="index.php?option=com_flota&amp;view=Car&amp;task=edit&amp;id=[ITEM:ID]"
+        />
+    </fieldset>
+</form>

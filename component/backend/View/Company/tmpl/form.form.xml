@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form validate="true">
+  <fieldset name="basic" label="COM_FLOTA_COMPANY_BASIC_ITEM">
+    <field name="name"
+           type="Text"
+           label="COM_FLOTA_COMPANY_NAME_LBL"
+    />
+
+    <field name="nip"
+           type="Text"
+           label="COM_FLOTA_COMPANY_NIP_LBL"
+    />
+
+    <field name="enabled" type="Published" label="JPUBLISHED"/>
+  </fieldset>
+</form>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+@package AkeebaSubs
+@copyright Copyright (c)2010-2017 Nicholas K. Dionysopoulos
+@license GNU General Public License version 3, or later
+-->
+<form
+        type="browse"
+        show_header="1"
+        show_filters="1"
+        show_pagination="1"
+        norows_placeholder="COM_FLOTA_NO_EMPLOYES"
+        >
+    <headerset>
+        <header name="flota_employe_id" label="COM_FLOTA_EMPLOYE_ID_LBL" type="RowSelect" tdwidth="3%" />
+
+		<header name="enabled" type="Published" sortable="true" tdwidth="3%"
+                label="JPUBLISHED"
+                />
+
+        <header name="user_id" type="Searchable" sortable="true"
+                label="COM_FLOTA_COMPANY_USER"
+                filterclass="input"
+                searchfieldname="name"
+                tdwidth="150px"
+                />
+
+
+        <header name="flota_company_id" type="Searchable"
+                label="COM_FLOTA_COMPANY_COMPANY_LBL"
+                filterclass="input"
+                searchfieldname="company"
+                tdwidth="150px"
+        />
+				
+    </headerset>
+
+    <fieldset name="items">
+        <field name="flota_employe_id" label="COM_flota_employe_id_LBL" type="SelectRow"/>
+
+		<field name="enabled" type="Published"/>
+		
+		<field name="user_id" type="User"
+               show_email="false"
+               show_id="false"
+               show_avatar="false"
+               show_link="true"
+                />
+
+        <field name="flota_company_id" type="CompanyField"
+               link_url="index.php?option=com_flota&amp;view=company&amp;id=[ITEM:COMPANY_ID]"
+
+        />
+        />
+
+        
+
+	
+				        
+    </fieldset>
+</form>

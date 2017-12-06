@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+@package AkeebaSubs
+@copyright Copyright (c)2010-2017 Nicholas K. Dionysopoulos
+@license GNU General Public License version 3, or later
+-->
+<form
+        type="browse"
+        show_header="1"
+        show_filters="1"
+        show_pagination="1"
+        norows_placeholder="COM_FLOTA_NO_COMPANY"
+        >
+    <headerset>
+        <header name="flota_company_id" label="COM_FLOTA_COMPANY_ID_LBL" type="RowSelect" tdwidth="3%" />
+
+		<header name="enabled" type="Published" sortable="true" tdwidth="3%"
+                label="JPUBLISHED"
+                />
+		
+		<header name="name" type="Text" sortable="true" tdwidth="5%"
+                label="COM_FLOTA_COMPANY_COMPANY_LBL"
+                filterclass="input-small"
+                />
+		
+		<header name="nip" type="Text" sortable="true" tdwidth="5%"
+                label="COM_FLOTA_COMPANY_NIP_LBL"
+                filterclass="input-small"
+                />
+				
+        <header name="created_by" type="Text" sortable="true" tdwidth="5%"
+                label="COM_FLOTA_COMPANY_USER"
+                />
+    </headerset>
+
+    <fieldset name="items">
+        <field name="flota_company_id" label="COM_FLOTA_COMPANY_ID_LBL" type="SelectRow"/>
+
+		<field name="enabled" type="Published"/>
+		
+        <field name="name" name_from="name" type="Text"
+               show_link="true"
+               url="index.php?option=com_flota&amp;view=Company&amp;id=[ITEM:ID]"
+        />
+
+		 <field name="nip" name_from="nip" type="Company"  model="Company"
+               show_link="false"
+        />
+
+        <field name="created_by" type="User"
+               show_email="false"
+               show_id="false"
+               show_avatar="false"
+               show_link="true"
+        />
+
+	
+				        
+    </fieldset>
+</form>

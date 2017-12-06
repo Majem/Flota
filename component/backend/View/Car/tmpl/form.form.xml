@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form validate="true">
+  <fieldset name="basic" label="COM_FLOTA_CAR_BASIC_ITEM">
+    <field name="flota_employe_id"
+           type="EmployeSelect"
+           required="true"
+           history="true"
+           label="COM_FLOTA_CAR_EMPLOYE_LBL"
+    />
+    <field name="mileage"
+           type="Mileage"
+           disabled="true"
+           required="true"
+           history="true"
+           label="COM_FLOTA_CAR_MILEAGE_LBL"
+    />
+    <field name="current_city"
+           type="City"
+           required="true"
+           autocomplete="off"
+           data-country=""
+           label="COM_FLOTA_CAR_MILEAGE_LBL"
+    />
+    <field name="production_year"
+           type="Text"
+           filtr="intval"
+           required="true"
+           label="COM_FLOTA_CAR_PRODUCTION_YEAR_LBL"
+    />
+    <field name="brand"
+           type="Text"
+           required="true"
+           label="COM_FLOTA_CAR_BRAND_LBL"
+    />
+    <field name="model"
+           type="Text"
+           required="true"
+           label="COM_FLOTA_CAR_MODEL_LBL"
+    />
+
+    <field name="availability"
+           type="Availability"
+           required="true"
+           label="COM_FLOTA_AVAILABILITY_LBL"
+    />
+
+    <field name="registration_number"
+           type="RegistrationNumber"
+           history="true"
+           required="true"
+           label="COM_FLOTA_CAR_REGISTRATION_NUMBER_LBL"
+    />
+    <field name="vim_number"
+           type="Text"
+           required="true"
+           label="COM_FLOTA_CAR_VIM_NUMBER_LBL"
+    />
+    <field name="insurance_date"
+           type="Calendar"
+           required="true"
+           label="COM_FLOTA_CAR_INSURANCE_DATE_LBL"
+    />
+    <field name="technical_review_date"
+           type="Calendar"
+           required="true"
+           label="COM_FLOTA_CAR_TECHNICAL_REVIEW_DATE_LBL"
+    />
+    <field name="service_review_date"
+           type="Calendar"
+           required="true"
+           label="COM_FLOTA_CAR_SERVICE_REVIEW_DATE_LBL"
+    />
+    <field name="description"
+           type="Editor"
+           label="COM_FLOTA_CAR_DESCRIPTION_LBL"
+    />
+    <field name="insurance_scan"
+           type="Image"
+           required="true"
+           label="COM_FLOTA_CAR_INSURANCE_SCAN_LBL"
+           directory="skany_ubezpieczen"
+    />
+    <field name="registration_scan"
+           type="Image"
+           required="true"
+           label="COM_FLOTA_CAR_REGISTRATION_SCAN_LBL"
+           directory="skany_dowodow_rejestracyjnych"
+    />
+  </fieldset>
+  <fieldset name="fuel_card" label="COM_FLOTA_CAR_FUEL_CARD_ITEM">
+    <field name="fuel_card_date"
+           type="Calendar"
+           required="true"
+           label="COM_FLOTA_CAR_FUEL_CARD_DATE_LBL"
+    />
+    <field name="fuel_card_pin"
+           type="Text"
+           required="true"
+           label="COM_FLOTA_CAR_FUEL_CARD_PIN_LBL"
+    />
+  </fieldset>
+  <fieldset name="owner" label="COM_FLOTA_CAR_OWNER_ITEM">
+    <field name="ownership_type"
+           type="GenericList"
+           required="true"
+           history="true"
+           label="COM_FLOTA_CAR_OWNER_TYPE_LBL"
+    >
+      <option value="1">Leasing</option>
+      <option value="2">Wynajem</option>
+      <option value="3">Własność spółki</option>
+    </field>
+    <field name="owner"
+           type="Text"
+           disabled="true"
+           label="COM_FLOTA_CAR_OWNER_LBL"
+    />
+    <field name="company_id"
+           type="CompanyField"
+           disabled="true"
+           label="COM_FLOTA_CAR_OWNER_LBL"
+    />
+  </fieldset>
+</form>

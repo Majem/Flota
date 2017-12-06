@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+@package AkeebaSubs
+@copyright Copyright (c)2010-2017 Nicholas K. Dionysopoulos
+@license GNU General Public License version 3, or later
+-->
+<form
+        type="browse"
+        show_header="1"
+        show_filters="1"
+        show_pagination="1"
+        norows_placeholder="COM_FLOTA_NO_CARS"
+        >
+    <headerset>
+        <header name="flota_car_id" label="COM_FLOTA_CAR_ID_LBL" type="RowSelect" tdwidth="10px" />
+
+        <header name="enabled" type="Published" sortable="true" tdwidth="10px" class="center"
+                label="JPUBLISHED"
+        />
+
+        <header name="availability" type="Availability" sortable="true" tdwidth="10px"
+                label="COM_FLOTA_AVAILABILITY_LBL"
+        />
+
+        <header name="registration_number" type="Text" sortable="true" tdwidth="160px"
+                label="COM_FLOTA_CAR_REGISTRATION_NUMBER_LBL"
+                filterclass="input-small"
+        />
+
+        <header name="flota_employe_id" type="Text" sortable="true"
+                label="COM_FLOTA_USER"
+                filterclass="input-small"
+        />
+
+        <header name="current_city" type="Searchable" sortable="true"
+                label="COM_FLOTA_CITY"
+                filterclass="input"
+                searchfieldname="current_city"
+        />
+    </headerset>
+
+    <fieldset name="items">
+        <field name="flota_car_id" label="COM_FLOTA_CAR_ID_LBL" type="SelectRow"/>
+
+        <field name="enabled" type="Published"/>
+
+        <field name="availability" type="Availability"/>
+
+        <field name="registration_number" name_from="registration_number" type="Text"
+               show_link="true"
+               url="index.php?option=com_flota&amp;view=Car&amp;task=edit&amp;id=[ITEM:ID]"
+        />
+
+        <field name="flota_employe_id" type="EmployeSelect"
+               link_url="index.php?option=com_flota&amp;view=Employe&amp;task=edit&amp;id=[ITEM:EMPLOYE_ID]"
+
+        />
+
+        <field name="current_city" type="City"
+               link_url="index.php?option=com_flota&amp;view=Employe&amp;task=edit&amp;id=[ITEM:EMPLOYE_ID]"
+
+        />
+
+    </fieldset>
+</form>

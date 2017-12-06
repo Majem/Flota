@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form validate="true">
+  <fieldset name="basic" label="COM_FLOTA_COMPANY_BASIC_ITEM">
+     <field
+            name="user_id"
+            type="User"
+            label="COM_FLOTA_EMPLOYES_USER_LBL"
+        />
+
+    <field
+           name="flota_company_id" type="Model"
+           model="Company"
+           label="COM_FLOTA_EMPLOYES_COMPANY_LBL"
+           key_field="flota_company_id"
+           value_field="name"
+           translate="false"
+           apply_access="false"
+        />
+  </fieldset>
+</form>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset 
+		name="general"
+		label="COM_FLOTA_CONFIG_LABEL"
+		desc="COM_FLOTA_CONFIG_DESC"
+		>
+			<field 
+			name="admin_group" type="usergroup"
+			label="COM_FLOTA_CONFIG_ADMIN_GROUP_LABEL"
+			description="COM_FLOTA_CONFIG_ADMIN_GROUP_DESC" 
+			multiple="true" />
+
+			<field
+				name="google_api" type="text"
+				label="COM_FLOTA_CONFIG_GOOGLE_API_LABEL"
+				description="COM_FLOTA_CONFIG_GOOGLE_API_DESC"
+				multiple="true" />
+		
+		</fieldset>
+	<fieldset
+			name="permissions"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			description="JCONFIG_PERMISSIONS_DESC"
+	>
+
+		<field
+				name="rules"
+				type="rules"
+				label="JCONFIG_PERMISSIONS_LABEL"
+				class="inputbox"
+				filter="rules"
+				component="com_flota"
+				section="component"/>
+	</fieldset>
+</config>

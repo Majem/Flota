@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@package Flota
+@copyright Copyright (c)2010-2017 Mateusz Maciejewski
+@license GNU General Public License version 3, or later
+-->
+<form validate="true">
+  <fieldset name="basic" label="COM_FLOTA_MAILINGCYCLES_BASIC_ITEM">
+    <field name="name"
+           type="Text"
+           required="true"
+           label="COM_FLOTA_MAILINGCYCLES_NAME_LBL"
+    />
+  </fieldset>
+  <fieldset name="cycle" label="COM_FLOTA_MAILINGCYCLES_CYCLE_ITEM">
+    <field
+            name="minutes"
+            type="integer"
+            default="Some integer"
+            label="COM_FLOTA_MAILINGCYCLES_MINUTES_LBL"
+            first="0"
+            last="60"
+            step="5" />
+    <field
+            name="hours"
+            type="integer"
+            default="Some integer"
+            label="COM_FLOTA_MAILINGCYCLES_HOURS_LBL"
+            first="0"
+            last="24"
+            step="1" />
+    <field
+            name="days"
+            type="integer"
+            default="Some integer"
+            label="COM_FLOTA_MAILINGCYCLES_DAYS_LBL"
+            first="0"
+            last="31"
+            step="1" />
+    <field
+            name="months"
+            type="integer"
+            default="Some integer"
+            label="COM_FLOTA_MAILINGCYCLES_MONTHS_LBL"
+            first="0"
+            last="12"
+            step="1" />
+  </fieldset>
+</form>

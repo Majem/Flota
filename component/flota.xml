@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.6.0" type="component" method="upgrade">
+	<name>Flota</name>
+	<creationDate>2017-11-10</creationDate>
+	<author>Mateusz Maciejewski</author>
+	<authorEmail>m.maciejewski@zygula.pl</authorEmail>
+	<authorUrl></authorUrl>
+	<copyright>Copyright (c)2017-2017 FIRMA ZYGUŁA SP. Z O. O. SP. K</copyright>
+	<license>GNU GPL v3 or later</license>
+	<version>rev</version>
+	<description>Zarządzanie flotą firmową</description>
+
+	<!-- Public front end files -->
+	<files folder="frontend">
+		<folder>Controller</folder>
+		<folder>lib</folder>
+		<folder>Dispatcher</folder>
+		<folder>Model</folder>
+		<folder>View</folder>
+		<folder>views</folder>
+		<filename>flota.php</filename>
+	</files>
+
+	<!-- Front end translation files -->
+	<languages folder="language/frontend">
+		<language tag="pl-PL">pl-PL/pl-PL.com_flota.ini</language>
+	</languages>
+
+	<!-- Media files -->
+	<!--
+	<media destination="com_compatibility" folder="media">
+		<folder>TODO</folder>
+		<filename>TODO</filename>
+	</media>
+	-->
+
+	<!-- Administrator back-end section -->
+	<administration>
+		<!-- Administration menu -->
+		<menu view="General">Flota</menu>
+		<submenu>
+			<menu view="Companies">Firmy</menu>
+			<menu view="Employes">Pracownicy</menu>
+			<menu view="Car">Samochody</menu>
+			<menu view="Cars">Powiadomienia</menu>
+		</submenu>
+
+		<!-- Back-end files -->
+		<files folder="backend">
+			<folder>Controller</folder>
+			<folder>Dispatcher</folder>
+			<folder>Form</folder>
+			<folder>Helper</folder>
+			<folder>Model</folder>
+			<folder>Toolbar</folder>
+			<folder>View</folder>
+
+			<filename>flota.php</filename>
+			<filename>fof.xml</filename>
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+		</files>
+
+		<!-- Back-end translation files -->
+		<languages folder="language/backend">
+			<language tag="pl-PL">pl-PL/pl-PL.com_flota.ini</language>
+			<language tag="pl-PL">pl-PL/pl-PL.com_flota.sys.ini</language>
+		</languages>
+
+	</administration>
+
+	<!-- Installation / uninstallation script file -->
+	<scriptfile>script.com_flota.php</scriptfile>
+</extension>
