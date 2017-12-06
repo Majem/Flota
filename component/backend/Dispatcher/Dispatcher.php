@@ -12,21 +12,24 @@ namespace Majem\Flota\Admin\Dispatcher;
 
 use FOF30\Container\Container;
 use FOF30\Dispatcher\Dispatcher as FOFDispatcher;
+use Majem\Flota\Admin\Render\Joomla3;
 
 class Dispatcher extends FOFDispatcher
 {
 	public function __construct(Container $container, array $config = array())
 	{
 		$this->defaultView = 'General';
-		
+
 		parent::__construct($container, $config);
 	}
 	
 	public function onBeforeDispatch()
 	{
 		// Render submenus as drop-down navigation bars powered by Bootstrap
-		$this->container->renderer->setOption('linkbar_style', 'flota');
+		$this->container->renderer->setOption('linkbar_style', 'joomla');
 		// Load common CSS and JavaScript
+        print_r($this->container);
+
 		\JHtml::_('jquery.framework');
 		$this->container->template->addCSS('media://com_flota/css/font-awesome.min.css', $this->container->mediaVersion);
 		$this->container->template->addCSS('media://com_flota/css/backend.css', $this->container->mediaVersion);
